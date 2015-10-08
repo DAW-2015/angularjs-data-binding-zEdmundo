@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-init="dolar = 4.10; qty = 1; ">
+      Dólar inicial: {{ :: dolar | currency }} <br />
+      Em BRL: <span>{{ :: dolar * 1 }}</span> <br /> <br />
+
+      Cotação dólar: <input type="number" ng-model="dolar"> <br />
+      Quantidade: <input type="number" ng-model="qty"> <br />
+      Dólar cotado em: {{ dolar | currency }}<br />
+      Em BRL: {{ qty * dolar | currency  }}<br />
+    </div>
+  </body>
+</html>
