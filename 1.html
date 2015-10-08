@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-init="celsius = 0; ">
+      Celsius: <input type="number" ng-model="celsius">ºC <br />
+      Fahrenheit: <span>{{ ((9*celsius)/5) + 32 }}ºF</span> <br />
+      Kelvin: <span>{{ celsius + 273 }}K</span> <br />
+    </div>
+  </body>
+</html>
