@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      ul li {
+        float: left;
+        margin-right: 10px;
+      }
+
+      ul li:last-of-type {
+        margin-right: 0;
+      }
+
+      .clearfix {
+        clear: both;
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-init="avaliacao = 1; comentario = 'Lorem ipsum dolor sit amet.'; ">
+      <form class="" action="index.html" method="post">
+        <h3>Avaliação</h3>
+        <ul>
+          <li ng-repeat="c in [1, 2, 3, 4, 5]">
+            <input type="radio" name="avaliacao" ng-model="$parent.avaliacao" ng-value="c" /> {{ c }} estrela(s)
+          </li>
+        </ul>
+
+        <div class="clearfix"></div>
+
+        <h3>Comentário</h3>
+        <textarea name="name" rows="8" cols="40" ng-model="comentario"></textarea>
+      </form>
+
+      <h4>Preview</h4>
+      <span>Nota: {{ avaliacao }} estrela(s)</span><br/>
+      <span>Comentário: {{ comentario }}</span>
+    </div>
+  </body>
+</html>
